@@ -28,11 +28,11 @@ class AkunBank:
         if tujuan == Akun2.__nopel:
             Akun2.__jumsal += transfer
             Akun1.__jumsal -= transfer
-            print(f"Transfer Rp {transfer} ke {Akun2.__napel} sukses!")
+            print(f"Transfer Rp.{transfer} ke {Akun2.__napel} sukses!")
         elif tujuan == Akun3.__nopel:
             Akun3.__jumsal += transfer
             Akun1.__jumsal -= transfer
-            print(f"Transfer Rp {transfer} ke {Akun3.__napel} sukses!")
+            print(f"Transfer Rp.{transfer} ke {Akun3.__napel} sukses!")
         else:
             print("No rekening tujuan tidak dikenal!")
 
