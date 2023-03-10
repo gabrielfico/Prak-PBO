@@ -30,7 +30,7 @@ class AkunBank:
             Akun1.__jumsal -= transfer
             print("Transfer Rp ", transfer, " ke ", Akun2.__napel, " sukses!")
         elif tujuan == Akun3.__nopel:
-            Akun3.___jumsal += transfer
+            Akun3.__jumsal += transfer
             Akun1.__jumsal -= transfer
             print("Transfer Rp ", transfer, " ke ", Akun3.__napel, " sukses!")
         else:
