@@ -38,7 +38,7 @@ class AkunBank:
 
     def lihat_menu():
         print("Selamat datang di Bank Jago")
-        print("Halo Gabriel Fico, ingin melakukan apa?")
+        print(f"Halo {Akun1.__napel}, ingin melakukan apa?")
         print("1. Lihat saldo")
         print("2. Tarik tunai")
         print("3. Transfer saldo")
