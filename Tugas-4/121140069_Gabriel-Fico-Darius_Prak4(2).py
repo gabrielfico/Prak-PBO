@@ -5,8 +5,8 @@ class Robot:
     alive = True
     def __init__(self, nama, health, damage):
         self.nama = nama
-        self.health = health
-        self.damage = damage
+        self.health = int(health)
+        self.damage = int(damage)
 
     def lakukan_aksi(self, other):
         if self.nama == "Antares":
@@ -128,8 +128,4 @@ while Mine.alive and Enemy.alive:
             print("Seri!")
     print()
 
-print("Pertandingan berakhir, ", end="")
-if Mine.alive:
-    print("Kamu menang!")
-else:
-    print("Kamu kalah!")
+print("Pertandingan berakhir!")
