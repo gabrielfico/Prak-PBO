@@ -1,6 +1,5 @@
 class Car:
     wheels = 4                              # globat atribut
-
     def __init__(self, color, model):
         self.color = color                  # atribut public
         self.model = model              
@@ -30,7 +29,6 @@ class Car:
 
     def _reset_mileage(self):               # fungsi untuk mereset odometer
         self._mileage = 0
-
 
 Mobil1 = Car("red", "Toyota")
 print(f"Color: {Mobil1.color}") 
