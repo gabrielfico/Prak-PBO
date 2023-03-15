@@ -57,4 +57,5 @@ for i in Rakit:
     print(f"Komputer {x}")
     for j in i:
         print(j)
+    x += 1
     print()
