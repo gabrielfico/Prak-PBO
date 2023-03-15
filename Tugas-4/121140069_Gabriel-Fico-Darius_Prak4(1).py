@@ -1,6 +1,5 @@
 class Komputer:
-    def __init__(self, nama, jenis, harga, merk):
-        self.nama = nama
+    def __init__(self, merk, jenis, harga):
         self.jenis = jenis
         self.harga = harga
         self.merk = merk
@@ -10,39 +9,33 @@ class Komputer:
 
 class Processor(Komputer):
     def __init__(self, merk, jenis, harga, core, kecepatan):
-        super().__init__(self, merk, jenis, harga)
+        Komputer.__init__(self, merk, jenis, harga)
         self.nama = "Processor"
-        self.core = core
-        self.kecepatan = kecepatan
-
-    def jumlah_core(self):
-        print(self.core)
-
-    def kecepatan_processor(self):
-        print(self.kecepatan)
+        self.jumlah_core = core
+        self.kecepatan_processor = kecepatan
 
 class RAM(Komputer):
     def __init__(self, merk, jenis, harga, capacity):
-        super().__init__(self, merk, jenis, harga)
+        Komputer.__init__(self, merk, jenis, harga)
         self.nama = "RAM"
         self.capacity = capacity
 
 class HDD(Komputer):
     def __init__(self, merk, jenis, harga, capacity, rpm):
-        super().__init__(self, merk, jenis, harga)
-        self.nama = "HDD"
+        Komputer.__init__(self, merk, jenis, harga)
+        self.nama = "SATA"
         self.capacity = capacity
         self.rpm = rpm
 
 class VGA(Komputer):
     def __init__(self, merk, jenis, harga, capacity):
-        super().__init__(self, merk, jenis, harga)
+        Komputer.__init__(self, merk, jenis, harga)
         self.nama = "VGA"
         self.capacity = capacity
 
 class PSU(Komputer):
     def __init__(self, merk, jenis, harga, daya):
-        super().__init__(self, merk, jenis, harga)
+        Komputer.__init__(self, merk, jenis, harga)
         self.nama = "PSU"
         self.daya = daya
     
@@ -58,3 +51,9 @@ PSU1 = PSU('Corsair', 'Corsair V550', 250000, '500W')
 PSU2 = PSU('Corsair', 'Corsair V550', 250000, '500W')
 
 Rakit = [[P1, RAM1, HDD1, VGA1, PSU1], [P2, RAM2, HDD2, VGA2, PSU2]]
+
+for i in range(len(Rakit)):
+    print(f"Komputer {i + 1}")
+    for j in range(len(Rakit[i])):
+        print(Rakit[i][j])
+    print()
