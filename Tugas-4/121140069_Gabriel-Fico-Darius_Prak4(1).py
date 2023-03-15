@@ -52,8 +52,9 @@ PSU2 = PSU('Corsair', 'Corsair V550', 250000, '500W')
 
 Rakit = [[P1, RAM1, HDD1, VGA1, PSU1], [P2, RAM2, HDD2, VGA2, PSU2]]
 
-for i in range(len(Rakit)):
-    print(f"Komputer {i + 1}")
-    for j in range(len(Rakit[i])):
-        print(Rakit[i][j])
+x = 1
+for i in Rakit:
+    print(f"Komputer {x}")
+    for j in i:
+        print(j)
     print()
