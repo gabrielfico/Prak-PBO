@@ -13,7 +13,7 @@ class Robot:
             if self.jumlah_turn % 3 == 0:
                 self.damage *= 1.5
                 self.terima_aksi(other, self.damage)
-                self.damage = 5000
+                self.damage /= 1.5
             else:
                 self.terima_aksi(other, self.damage)
         elif self.nama == "Alphasetia":
@@ -28,7 +28,7 @@ class Robot:
                 self.damage *= 2
                 self.health += 7000
                 self.terima_aksi(other, self.damage)
-                self.damage = 5500
+                self.damage /= 2
                 print("Lecalicus mendapatkan health tambahan sebesar 7000")
             else:
                 self.terima_aksi(other, self.damage)
@@ -37,11 +37,11 @@ class Robot:
         if damage > other.health:
             other.health = 0
             other.alive = False
-            print(f"{other.nama} menerima damage sebesar {damage}")
+            print(f"{other.nama} menerima damage sebesar {int(damage)}")
             print(f"{other.nama} telah mati!")
         else:
             other.health -= damage
-            print(f"{other.nama} menerima damage sebesar {damage}")
+            print(f"{other.nama} menerima damage sebesar {int(damage)}")
 
 class Antares(Robot):
     def __init__(self):
@@ -94,7 +94,7 @@ print()
 while Mine.alive and Enemy.alive:
     Robot.jumlah_turn += 1
     print(f"Turn saat ini: {Robot.jumlah_turn}")
-    print(f"Robotmu ({Mine.nama} - {Mine.health} HP), robot lawan ({Enemy.nama} - {Enemy.health} HP)")
+    print(f"Robotmu ({Mine.nama} - {int(Mine.health)} HP), robot lawan ({Enemy.nama} - {int(Enemy.health)} HP)")
     My_turn = int(input(f"Pilih tangan robotmu ({Mine.nama}) : "))
     while loop:
         if My_turn > 0 and My_turn < 4:
